@@ -39,7 +39,7 @@ $(document).ready(function () {
 
 const getSingleFilm=(id)=>{
     sessionStorage.setItem('id',id)
-    window.location.pathname='page/filmitem.html'
+    window.location.pathname='../page/filmitem.html'
     return false
 }
 
