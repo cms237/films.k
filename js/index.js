@@ -10,7 +10,7 @@ $(document).ready(function () {
     async function getFilm(Titre) {
         
         try {
-          const response = await axios.get('http://www.omdbapi.com/?apikey=9d09d4ed&s='+Titre);
+          const response = await axios.get('https://www.omdbapi.com/?apikey=9d09d4ed&s='+Titre);
           var films=response.data.Search
           $.each(films, function (index, item) { 
             if (item.Poster!=='N/A') {
@@ -45,7 +45,7 @@ const getSingleFilm=(id)=>{
 
 async function getIdFilm() {
     try {
-      const response = await axios.get('http://www.omdbapi.com/?apikey=9d09d4ed&i='+sessionStorage.getItem('id'));
+      const response = await axios.get('https://www.omdbapi.com/?apikey=9d09d4ed&i='+sessionStorage.getItem('id'));
       console.log(response.data);
       let filmitem=response.data
       $('.img').html('<img src='+filmitem.Poster+' class="img-fluid">');
